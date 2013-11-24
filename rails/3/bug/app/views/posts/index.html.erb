@@ -1,0 +1,10 @@
+<h2>Posts</h2>
+<%= link_to "New Post", new_post_path, :class => "btn btn-primary" %>
+<hr>
+<ul>
+  <% @posts.each do |post| %>
+    <li>
+      <h3><%= link_to post.title, post_path(post) %></h3>
+    </li>
+  <% end %>
+</ul>

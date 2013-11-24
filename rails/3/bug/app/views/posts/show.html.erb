@@ -1,0 +1,10 @@
+<h2><%= @post.title %></h2>
+
+<%= simple_format(@post.body) %>
+
+<% @post.comments.each do |comment| %>
+  <div class='comment' id='comment_<%= comment.id %>'>
+    <strong><%= comment.user.name %></strong>
+    <%= simple_format(comment.body) %>
+  </div>
+<% end %>
