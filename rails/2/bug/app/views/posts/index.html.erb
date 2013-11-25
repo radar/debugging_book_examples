@@ -1,14 +1,10 @@
 <h2>Posts</h2>
 <%= link_to "New Post", new_post_path, :class => "btn btn-primary" %>
-<table class='table'>
-  <thead>
-    <th>Title</th>
-  </thead>
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= link_to post.title, edit_post_path(post) %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<hr>
+<ul>
+  <% @posts.each do |post| %>
+    <li>
+      <h3><%= link_to post.title, post_path(post) %></h3>
+    </li>
+  <% end %>
+</ul>
