@@ -1,0 +1,11 @@
+source 'http://rubygems.org'
+
+gem 'rails', '3.0.20'
+gem 'sqlite3'
+gem 'devise', '1.1.9'
+
+group :test, :development do
+  gem 'pry'
+  gem 'rspec-rails', '~> 2.14'
+  gem 'capybara', '~> 2.1'
+end

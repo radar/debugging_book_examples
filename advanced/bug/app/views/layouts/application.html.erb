@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bug</title>
+  <%= csrf_meta_tag %>
+  <%= stylesheet_link_tag "http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" %>
+  <style type='text/css'>
+    body {
+      margin: 2% 20%;
+    }
+  </style>
+</head>
+<body>
+<% flash.each do |k,v| %>
+  <% style = k == :notice ? "success" : "danger" %>
+  <div class="alert alert-<%= style %>"><%= v %></div>
+<% end %>
+<%= yield %>
+
+</body>
+</html>
